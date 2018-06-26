@@ -16,7 +16,11 @@ end Integer_Type;
 data Natural_Type extends Base_Types::Natural
 end Natural_Type;
 
-data Array_Type extends Base_Types::Array
+data Array_Type
+  properties
+    Data_Model::Data_Representation => Array;
+    Data_Model::Base_Type => (classifier (Base_Types::Integer));
+    Data_Model::Dimension => (500_000);
 end Array_Type;
 
 data Integer_8_Type extends Base_Types::Integer_8
